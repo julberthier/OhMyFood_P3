@@ -10,7 +10,7 @@
 /* body */
 body {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   font-family: "Roboto", sans-serif;
 }
 
@@ -21,13 +21,10 @@ a:visited {
   color: white;
 }
 
-/*
-
 /* header */
 header {
-  height: 128px;
+  height: 99px;
   width: 100%;
-  margin-bottom: 15px;
 }
 header div .fas {
   margin-right: 10px;
@@ -57,10 +54,130 @@ header div .fas {
   background-color: #eaeaea;
   height: 40px;
   width: 100%;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.4);
+  font-weight: 500;
+  font-size: 15px;
 }
 
-/*
+/*TITRE */
+#container_tit {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: #f6f6f6;
+  height: 250px;
+  padding: 25px 40px;
+}
+#container_tit #main_tit {
+  font-size: 24px;
+  font-weight: 800;
+  text-align: center;
+  width: 250px;
+}
+#container_tit #ud_tit {
+  font-size: 16px;
+  text-align: center;
+}
+#container_tit #button_tit {
+  height: 45px;
+  width: 188px;
+  color: white;
+  font-weight: 700;
+  border-radius: 20px;
+  padding: 15px;
+  border: none;
+  background: linear-gradient(160deg, #ee73da 0%, #df6eda 21%, #a35bdc 100%);
+  box-shadow: 1px 1px 12px silver;
+}
 
+/* FONCTIONNEMENT */
+#ftment {
+  width: 100%;
+  height: 350px;
+  margin-top: 30px;
+}
+#ftment h3 {
+  margin-left: 15px;
+  font-size: 22px;
+  font-weight: 900;
+}
+
+#li_btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 20px 20px;
+}
+
+#btn {
+  margin: 10px 0;
+  padding: 30px 10px;
+  width: 388px;
+  border-radius: 20px;
+  border: none;
+  background-color: #f6f6f6;
+  font-weight: 900;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  position: relative;
+  box-shadow: 1px 1px 12px silver;
+}
+#btn:nth-child(1)::before {
+  content: "1";
+  position: absolute;
+  left: -10px;
+  background-color: #9356dc;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  padding: 8px;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  vertical-align: center;
+}
+#btn:nth-child(2)::before {
+  content: "2";
+  position: absolute;
+  left: 0;
+  left: -10px;
+  background-color: #9356dc;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  padding: 8px;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  vertical-align: center;
+}
+#btn:nth-child(3)::before {
+  content: "3";
+  position: absolute;
+  left: 0;
+  left: -10px;
+  background-color: #9356dc;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  padding: 8px;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  vertical-align: center;
+}
+#btn .fas {
+  position: absolute;
+  left: 65px;
+  color: #7e7e7e;
+}
+#btn:hover {
+  background-color: #f5edff;
+  border: none;
+}
+#btn:hover .fas {
+  color: #9356dc;
+}
 
 /*
     footer
