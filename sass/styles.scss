@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+/* VARIABLES */
+//fonts
+$primaryfont: 'Roboto', sans-serif;
+$secondfont: "Shrikhand", sans-serif;
+//colors
+$white: white;
+
+
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* body */
+
+body {
+
+    width: 100%;
+    height: 100vh;
+    font-family: $primaryfont;
+}
+
+a {
+
+    text-decoration: none;
+
+    &:visited {
+        color: $white;
+    }
+}
+
+/*
+
+/* header */
+
+header {
+    height: 128px;
+    width: 100%;
+    margin-bottom: 15px;
+
+    div {
+        .fas {           
+                margin-right: 10px;
+            }
+        }
+    }
+
+#head_tit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-family: $secondfont;
+    margin-top: 10px;
+    margin-bottom: -15px;
+}
+
+#tit_des {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#loc_map {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#eaeaea;
+    height: 40px;
+    width: 100%;
+}
+
+/*
+
+
+/*
+    footer
+    */
+
+
+
+footer {
+    background-color: rgb(49, 49, 49);
+    height: 20vh;
+    width: 100%; 
+    color: $white;
+
+    .fas {
+        margin-right: 10px;
+        transform: scale(0.7);
+    }
+}
+
+#footer_tit {
+    font-family: "Shrikhand";
+    font-size: 18px;
+    margin-top: 55px;
+}
+
+ul {
+    li {
+       list-style: none; 
+    }
+}    
+
+#footer_des {
+line-height: 25px; 
+margin: 0 0 20px 15px;
+padding-top: 15px;
+}
