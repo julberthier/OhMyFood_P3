@@ -244,13 +244,13 @@ div.rest_card.new_card::after {
   border-radius: 2px;
 }
 div.rest_card.bg_img_1 {
-  background-image: url(/images/restaurants/la_note_enchantée.jpg);
+  background-image: url(../images/restaurants/la_note_enchantée.jpg);
 }
 div.rest_card.bg_img_2 {
-  background-image: url(/images/restaurants/a_la_francaise.jpg);
+  background-image: url(../images/restaurants/a_la_francaise.jpg);
 }
 div.rest_card.bg_img_3 {
-  background-image: url(/images/restaurants/le_delice_des_sens.jpg);
+  background-image: url(../images/restaurants/le_delice_des_sens.jpg);
 }
 div.rest_card .overlay_card {
   background-color: white;
@@ -326,7 +326,7 @@ ul li a:visited {
 
 /* PAGE MENU */
 #bg_img_rest {
-  background-image: url(/images/restaurants/la_palette_du_gout.jpg);
+  background-image: url(../images/restaurants/la_palette_du_gout.jpg);
   height: 280px;
   width: 100%;
   object-fit: cover;
@@ -338,13 +338,13 @@ ul li a:visited {
   z-index: -1;
 }
 #bg_img_rest.rest_2 {
-  background-image: url(/images/restaurants/a_la_francaise.jpg);
+  background-image: url(../images/restaurants/a_la_francaise.jpg);
 }
 #bg_img_rest.rest_3 {
-  background-image: url(/images/restaurants/la_note_enchantée.jpg);
+  background-image: url(../images/restaurants/la_note_enchantée.jpg);
 }
 #bg_img_rest.rest_4 {
-  background-image: url(/images/restaurants/le_delice_des_sens.jpg);
+  background-image: url(../images/restaurants/le_delice_des_sens.jpg);
 }
 
 #menu_card_des {
