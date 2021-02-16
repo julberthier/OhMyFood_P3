@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 /* VARIABLES */
@@ -17,17 +18,22 @@ body {
 a {
   text-decoration: none;
 }
-a:visited {
-  color: white;
-}
 
 /* header */
 header {
   height: 99px;
   width: 100%;
+  position: relative;
+  /* header page menu */
+  /*fin*/
 }
 header div .fas {
   margin-right: 10px;
+}
+header .arrow_head {
+  position: absolute;
+  top: 15px;
+  left: 25px;
 }
 
 #head_tit {
@@ -66,6 +72,7 @@ header div .fas {
   flex-wrap: wrap;
   background-color: #f6f6f6;
   height: 250px;
+  width: 100%;
   padding: 25px 40px;
 }
 #container_tit #main_tit {
@@ -112,7 +119,7 @@ header div .fas {
 #btn {
   margin: 10px 0;
   padding: 30px 10px;
-  width: 388px;
+  width: 100%;
   border-radius: 20px;
   border: none;
   background-color: #f6f6f6;
@@ -121,11 +128,13 @@ header div .fas {
   font-family: "Roboto", sans-serif;
   position: relative;
   box-shadow: 1px 1px 12px silver;
+  text-align: center;
 }
 #btn:nth-child(1)::before {
   content: "1";
   position: absolute;
   left: -10px;
+  top: 24px;
   background-color: #9356dc;
   height: 30px;
   width: 30px;
@@ -139,8 +148,8 @@ header div .fas {
 #btn:nth-child(2)::before {
   content: "2";
   position: absolute;
-  left: 0;
   left: -10px;
+  top: 24px;
   background-color: #9356dc;
   height: 30px;
   width: 30px;
@@ -154,8 +163,8 @@ header div .fas {
 #btn:nth-child(3)::before {
   content: "3";
   position: absolute;
-  left: 0;
   left: -10px;
+  top: 24px;
   background-color: #9356dc;
   height: 30px;
   width: 30px;
@@ -168,7 +177,7 @@ header div .fas {
 }
 #btn .fas {
   position: absolute;
-  left: 65px;
+  left: 9vw;
   color: #7e7e7e;
 }
 #btn:hover {
@@ -177,6 +186,89 @@ header div .fas {
 }
 #btn:hover .fas {
   color: #9356dc;
+}
+
+/* Restaurant */
+#card_design {
+  background-color: #f6f6f6;
+  padding: 15px 10px;
+  width: 100%;
+  height: 100%;
+}
+#card_design h2 {
+  font-size: 22px;
+  font-weight: 900;
+  margin-bottom: 15px;
+}
+
+div.rest_card {
+  background-image: url(/images/restaurants/la_palette_du_gout.jpg);
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  border-radius: 15px;
+  margin: 10px 0;
+  box-shadow: 1px 1px 12px silver;
+  color: black;
+  cursor: pointer;
+}
+div.rest_card.new_card::after {
+  content: "Nouveau";
+  position: absolute;
+  background: #99e2d0;
+  padding: 6px 10px;
+  color: #008766;
+  font-weight: 500;
+  font-size: 12px;
+  right: 20px;
+  top: 10px;
+  border-radius: 2px;
+}
+div.rest_card:nth-child(3) {
+  background-image: url(/images/restaurants/la_note_enchantée.jpg);
+}
+div.rest_card:nth-child(4) {
+  background-image: url(/images/restaurants/a_la_francaise.jpg);
+}
+div.rest_card:nth-child(5) {
+  background-image: url(/images/restaurants/le_delice_des_sens.jpg);
+}
+div.rest_card .overlay_card {
+  background-color: white;
+  position: absolute;
+  bottom: -1px;
+  width: 100%;
+  height: 50px;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  padding-left: 10px;
+  padding-top: 5px;
+}
+div.rest_card .overlay_card .far {
+  position: absolute;
+  right: 10px;
+  top: 15px;
+}
+div.rest_card .overlay_card .far:hover {
+  background: url(/f004);
+  background: linear-gradient(160deg, #ee73da 0%, #df6eda 21%, #a35bdc 100%);
+  cursor: pointer;
+}
+div.rest_card .overlay_card .far:active {
+  background: linear-gradient(160deg, #ee73da 0%, #df6eda 21%, #a35bdc 100%);
+  cursor: pointer;
+}
+div.rest_card .overlay_card .rest_card_tit {
+  font-weight: 600;
+  font-size: 15px;
+}
+div.rest_card .overlay_card .rest_card_ut {
+  font-size: 13px;
+  font-weight: 400;
 }
 
 /*
@@ -201,12 +293,115 @@ footer .fas {
 
 ul li {
   list-style: none;
+  color: white;
+}
+ul li a:visited {
+  color: white;
 }
 
 #footer_des {
   line-height: 25px;
   margin: 0 0 20px 15px;
   padding-top: 15px;
+}
+
+/* PAGE MENU */
+#bg_img_rest {
+  background-image: url(/images/restaurants/la_palette_du_gout.jpg);
+  height: 280px;
+  width: 100%;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: 60px;
+  z-index: -1;
+}
+
+#menu_card_des {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #f6f6f6;
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  padding: 10px;
+  position: relative;
+  margin-top: 170px;
+}
+#menu_card_des h1 {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 22px;
+  margin-bottom: 15px;
+  padding-top: 15px;
+  font-weight: 600;
+}
+#menu_card_des .heart_icon {
+  position: absolute;
+  right: 25px;
+  top: 30px;
+  font-size: 20px;
+}
+#menu_card_des .menu_tit {
+  margin-top: 20px;
+}
+#menu_card_des .menu_tit::after {
+  content: "";
+  border-bottom: #008766 5px;
+  height: 5px;
+  width: 50px;
+  position: absolute;
+}
+#menu_card_des .menu_btn {
+  margin: 10px 0;
+  background-color: white;
+  border-radius: 10px;
+  width: 100%;
+  height: 50px;
+  border: none;
+  box-shadow: 1px 1px 12px silver;
+  position: relative;
+}
+#menu_card_des .menu_btn:hover {
+  cursor: pointer;
+}
+#menu_card_des .menu_btn .content_card {
+  position: absolute;
+  left: 10px;
+  top: 7px;
+  line-height: 20px;
+}
+#menu_card_des .menu_btn .content_card .tit_menu_card {
+  font-weight: 600;
+  font-size: 13px;
+}
+#menu_card_des .menu_btn .content_card .ut_menu_card {
+  font-weight: 500;
+  font-size: 12px;
+  text-align: left;
+}
+#menu_card_des .menu_btn .card_price {
+  position: absolute;
+  right: 20px;
+  top: 25px;
+  font-weight: 600;
+  font-size: 12px;
+}
+#menu_card_des #button_pay {
+  height: 45px;
+  width: 188px;
+  color: white;
+  font-weight: 700;
+  border-radius: 20px;
+  padding: 15px;
+  border: none;
+  background: linear-gradient(160deg, #ee73da 0%, #df6eda 21%, #a35bdc 100%);
+  box-shadow: 1px 1px 12px silver;
+  margin: 25px 0;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=styles.css.map */
