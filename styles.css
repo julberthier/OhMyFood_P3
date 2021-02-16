@@ -19,6 +19,10 @@ a {
   text-decoration: none;
 }
 
+button {
+  outline: none;
+}
+
 /* header */
 header {
   height: 99px;
@@ -34,6 +38,9 @@ header .arrow_head {
   position: absolute;
   top: 15px;
   left: 25px;
+}
+header a {
+  color: black;
 }
 
 #head_tit {
@@ -65,7 +72,7 @@ header .arrow_head {
   font-size: 15px;
 }
 
-/*TITRE */
+/* TITRE */
 #container_tit {
   display: flex;
   justify-content: center;
@@ -95,6 +102,14 @@ header .arrow_head {
   border: none;
   background: linear-gradient(160deg, #ee73da 0%, #df6eda 21%, #a35bdc 100%);
   box-shadow: 1px 1px 12px silver;
+  cursor: pointer;
+}
+
+.container_sec_tit {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* FONCTIONNEMENT */
@@ -228,13 +243,13 @@ div.rest_card.new_card::after {
   top: 10px;
   border-radius: 2px;
 }
-div.rest_card:nth-child(3) {
+div.rest_card.bg_img_1 {
   background-image: url(/images/restaurants/la_note_enchantée.jpg);
 }
-div.rest_card:nth-child(4) {
+div.rest_card.bg_img_2 {
   background-image: url(/images/restaurants/a_la_francaise.jpg);
 }
-div.rest_card:nth-child(5) {
+div.rest_card.bg_img_3 {
   background-image: url(/images/restaurants/le_delice_des_sens.jpg);
 }
 div.rest_card .overlay_card {
@@ -295,8 +310,12 @@ ul li {
   list-style: none;
   color: white;
 }
+ul li a {
+  color: white;
+}
 ul li a:visited {
   color: white;
+  text-decoration: none;
 }
 
 #footer_des {
@@ -318,11 +337,20 @@ ul li a:visited {
   top: 60px;
   z-index: -1;
 }
+#bg_img_rest.rest_2 {
+  background-image: url(/images/restaurants/a_la_francaise.jpg);
+}
+#bg_img_rest.rest_3 {
+  background-image: url(/images/restaurants/la_note_enchantée.jpg);
+}
+#bg_img_rest.rest_4 {
+  background-image: url(/images/restaurants/le_delice_des_sens.jpg);
+}
 
 #menu_card_des {
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  flex-flow: column wrap;
   background-color: #f6f6f6;
   width: 100%;
   height: 100%;
@@ -346,14 +374,16 @@ ul li a:visited {
   font-size: 20px;
 }
 #menu_card_des .menu_tit {
-  margin-top: 20px;
+  margin: 20px 0 8px 0;
+  position: relative;
 }
 #menu_card_des .menu_tit::after {
   content: "";
-  border-bottom: #008766 5px;
-  height: 5px;
-  width: 50px;
+  border-bottom: #99e2d0 3px solid;
+  width: 40px;
   position: absolute;
+  bottom: -6px;
+  left: 2px;
 }
 #menu_card_des .menu_btn {
   margin: 10px 0;
@@ -364,6 +394,7 @@ ul li a:visited {
   border: none;
   box-shadow: 1px 1px 12px silver;
   position: relative;
+  text-align: left;
 }
 #menu_card_des .menu_btn:hover {
   cursor: pointer;
@@ -390,7 +421,14 @@ ul li a:visited {
   font-weight: 600;
   font-size: 12px;
 }
-#menu_card_des #button_pay {
+
+.btn_center {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100px;
+}
+.btn_center #button_pay {
   height: 45px;
   width: 188px;
   color: white;
@@ -399,9 +437,11 @@ ul li a:visited {
   padding: 15px;
   border: none;
   background: linear-gradient(160deg, #ee73da 0%, #df6eda 21%, #a35bdc 100%);
-  box-shadow: 1px 1px 12px silver;
+  box-shadow: 1px 1px 12px #a1a1a1;
   margin: 25px 0;
   cursor: pointer;
 }
+
+/* ANIMATIONS */
 
 /*# sourceMappingURL=styles.css.map */
