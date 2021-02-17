@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 /* VARIABLES */
@@ -146,7 +145,7 @@ header a {
   font-family: "Roboto", sans-serif;
   position: relative;
   box-shadow: 1px 1px 12px silver;
-  text-align: center;
+  text-align: baseline;
 }
 #btn:nth-child(1)::before {
   content: "1";
@@ -247,7 +246,7 @@ div.rest_card.new_card::after {
   border-radius: 2px;
 }
 div.rest_card.bg_img_1 {
-  background-image: url(../images/restaurants/la_note_enchantée.jpg);
+  background-image: url(../images/restaurants/la_note_enchantee.jpg);
 }
 div.rest_card.bg_img_2 {
   background-image: url(../images/restaurants/a_la_francaise.jpg);
@@ -344,7 +343,7 @@ ul li a:visited {
   background-image: url(../images/restaurants/a_la_francaise.jpg);
 }
 #bg_img_rest.rest_3 {
-  background-image: url(../images/restaurants/la_note_enchantée.jpg);
+  background-image: url(../images/restaurants/la_note_enchantee.jpg);
 }
 #bg_img_rest.rest_4 {
   background-image: url(../images/restaurants/le_delice_des_sens.jpg);
