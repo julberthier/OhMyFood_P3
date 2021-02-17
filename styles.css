@@ -29,7 +29,7 @@ header {
   width: 100%;
   position: relative;
   /* header page menu */
-  /*fin*/
+  /* fin header page menu*/
 }
 header div .fas {
   margin-right: 10px;
@@ -103,6 +103,9 @@ header a {
   background: linear-gradient(160deg, #ee73da 0%, #df6eda 21%, #a35bdc 100%);
   box-shadow: 1px 1px 12px silver;
   cursor: pointer;
+}
+#container_tit #button_tit.btn_anim_hover:hover {
+  box-shadow: inset 1px 1px 3px rgba(255, 255, 255, 0.7), 1px 1px 12px #5e5e5e;
 }
 
 .container_sec_tit {
@@ -441,7 +444,104 @@ ul li a:visited {
   margin: 25px 0;
   cursor: pointer;
 }
+.btn_center #button_pay:hover {
+  box-shadow: inset 1px 1px 3px rgba(255, 255, 255, 0.7), 1px 1px 12px #5e5e5e;
+}
 
-/* ANIMATIONS */
+/* LOADER // ANIMATIONS */
+#content_loader {
+  height: 100vh;
+  width: 100vw;
+  background-color: #008766;
+}
+#content_loader #loader_tit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Shrikhand", sans-serif;
+  font-size: 70px;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 100px;
+  width: 395px;
+  position: absolute;
+}
+#content_loader #loader_tit .svg_1 {
+  position: absolute;
+  top: -10px;
+  right: -30px;
+  animation: bounce 3s infinite ease-in-out;
+}
+#content_loader #loader_tit .svg_2 {
+  position: absolute;
+  top: -10px;
+  left: -30px;
+  animation: bounce2 3s infinite ease-in-out;
+}
+#content_loader #loader_tit .svg_3 {
+  position: absolute;
+  bottom: -10px;
+  right: -30px;
+  animation: bounce3 3s infinite ease-in-out;
+}
+#content_loader #loader_tit .svg_4 {
+  position: absolute;
+  bottom: -10px;
+  left: -30px;
+  animation: bounce4 3s infinite ease-in-out;
+}
+
+.svg_loader {
+  height: 32px;
+  width: 32px;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-50px) scale(1.5) rotate(-25deg);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes bounce2 {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-50px) scale(1.5) rotate(25deg);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes bounce3 {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(50px) scale(1.5) rotate(-25deg);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes bounce4 {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(50px) scale(1.5) rotate(25deg);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
 
 /*# sourceMappingURL=styles.css.map */

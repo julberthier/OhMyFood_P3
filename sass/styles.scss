@@ -12,7 +12,7 @@ $bggrey: #f6f6f6;
 $purple: #9356dc;
 $bggreen: #99e2d0;
 $darkgreen: #008766;
-
+$shadowbtnanim: inset 1px 1px 3px rgb(255, 255, 255, 0.7), 1px 1px 12px rgb(94, 94, 94);
 
 
 
@@ -66,7 +66,7 @@ header {
         color: black;
     }
 
-    /*fin*/
+    /* fin header page menu*/
 }
 
 #head_tit {
@@ -133,9 +133,15 @@ header {
         background: linear-gradient(160deg, rgba(238,115,218,1) 0%, rgba(223,110,218,1) 21%, rgba(163,91,220,1) 100%); ;
         box-shadow: 1px 1px 12px rgb(192, 192, 192);
         cursor: pointer;
+        
+        &.btn_anim_hover:hover {
+            box-shadow: $shadowbtnanim;            
+        }
 
     }
 }
+
+
 
 .container_sec_tit {
     display: flex;
@@ -528,9 +534,132 @@ padding-top: 15px;
         box-shadow: 1px 1px 12px rgb(161, 161, 161);
         margin: 25px 0;
         cursor: pointer;
+
+        &:hover {
+            box-shadow: $shadowbtnanim;
+        }
     }
 }
 
 
 
-/* ANIMATIONS */
+/* LOADER // ANIMATIONS */
+
+#content_loader {
+    height: 100vh;
+    width: 100vw;
+    background-color: $darkgreen;
+
+    #loader_tit {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: $secondfont;
+        font-size: 70px;
+        margin: auto;
+        left: 0;
+        right: 0;
+        top: 0; 
+        bottom: 0;
+        height: 100px;
+        width: 395px;
+        position: absolute;    
+
+        .svg_1 {
+            position: absolute;
+            top: -10px;
+            right: -30px; 
+            animation: bounce 3s infinite ease-in-out; 
+        }    
+
+        .svg_2 {
+            position: absolute;
+            top: -10px;
+            left: -30px;  
+            animation: bounce2 3s infinite ease-in-out;
+        }   
+        
+        .svg_3 {
+            position: absolute;
+            bottom: -10px;
+            right: -30px;  
+            animation: bounce3 3s infinite ease-in-out;
+        }    
+
+        .svg_4 {
+            position: absolute;
+            bottom: -10px;
+            left: -30px;  
+            animation: bounce4 3s infinite ease-in-out;
+        }    
+    }
+
+    
+}
+
+.svg_loader {
+    height: 32px;
+    width: 32px;
+}
+
+@keyframes bounce {
+    0% {
+    transform: translateY(0px);
+    }
+
+    50% {
+    transform: translateY(-50px) scale(1.5) rotate(-25deg);
+
+    }
+
+    100% {
+    transform: translateY(-0px);
+    }
+}
+
+
+@keyframes bounce2 {
+    0% {
+    transform: translateY(0px);
+    }
+
+    50% {
+    transform: translateY(-50px) scale(1.5) rotate(25deg);
+
+    }
+
+    100% {
+    transform: translateY(-0px);
+    }
+}
+
+@keyframes bounce3 {
+    0% {
+    transform: translateY(0px);
+    }
+
+    50% {
+    transform: translateY(50px) scale(1.5) rotate(-25deg);
+
+    }
+
+    100% {
+    transform: translateY(-0px);
+    }
+}
+
+@keyframes bounce4 {
+    0% {
+    transform: translateY(0px);
+    }
+
+    50% {
+    transform: translateY(50px) scale(1.5) rotate(25deg);
+
+    }
+
+    100% {
+    transform: translateY(-0px);
+    }
+}
+
