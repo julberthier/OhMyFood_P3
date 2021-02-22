@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css" />    
+    <link rel="stylesheet" href="sass/styles.css" />    
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" /> 
     <title>ohmyfood</title>
 </head>
@@ -18,44 +18,123 @@
 
     <section>
 
-        <div id="menu_card_des">
+        <form method="get" id="menu_card_des">
 
-            <span><h1>À la française</h1><i class="far fa-heart heart_icon"></i></span>
+            <div><h1>À la française</h1><div class="not_liked heart_2"></div></div>
 
             <span class="menu_tit">ENTRÉES</span>
 
-            <button class="menu_btn" type="button"><div class="content_card"><span class="tit_menu_card">Tarte de poulpe acidulé</span><div class="ut_menu_card">Aux zestes d'orange</div></div><span class="card_price">25€</span></button>
-            <button class="menu_btn" type="button"><div class="content_card"><span class="tit_menu_card">Velouté de légumes d'antan</span><div class="ut_menu_card">Carotte, panais, topinambour</div></div><span class="card_price">35€</span></button>
-            <button class="menu_btn" type="button"><div class="content_card"><span class="tit_menu_card">Soupe à l'oignon</span><div class="ut_menu_card">Revisitée</div></div><span class="card_price">20€</span></button>           
+            <input type="checkbox" class="check" id="checked" name="checkbox">   
+                <label class="menu_btn" for="checked">   
+                    <span class="content_card">
+                        <span class="tit_menu_card">Tartare de poulpe acidulé</span>
+                        <span class="ut_menu_card">Aux zestes d'orange</span>
+                    </span>
+                        <span class="card_price">25€</span>  
+                    <span class="popup"><i class="fas fa-check-circle popup_circle"></i></span>    
+                </label> 
+
+            <input type="checkbox" class="check" id="checked-2" name="checkbox">   
+                <label class="menu_btn" for="checked-2">   
+                    <span class="content_card">
+                        <span class="tit_menu_card">Velouté de légumes d'antan</span>
+                        <span class="ut_menu_card">Carotte, panais, topinambour</span>
+                    </span>
+                        <span class="card_price">35€</span>  
+                    <span class="popup"><i class="fas fa-check-circle popup_circle"></i></span>    
+                </label>    
+                
+                <input type="checkbox" class="check" id="checked-3" name="checkbox">   
+                <label class="menu_btn" for="checked-3">   
+                    <span class="content_card">
+                        <span class="tit_menu_card">Soupe à l'oignon</span>
+                        <span class="ut_menu_card">Revisitée</span>
+                    </span>
+                        <span class="card_price">20€</span>  
+                    <span class="popup"><i class="fas fa-check-circle popup_circle"></i></span>    
+                </label>                     
             
             <span class="menu_tit">PLATS</span>
 
-            <button class="menu_btn" type="button"><div class="content_card"><span class="tit_menu_card">Coquilles Saint_Jacques</span><div class="ut_menu_card">Accompagné d'une purée de panais</div></div><span class="card_price">40€</span></button>
-            <button class="menu_btn" type="button"><div class="content_card"><span class="tit_menu_card">Magret de Canard</span><div class="ut_menu_card">Et parmentier de pommes de terre</div></div><span class="card_price">35€</span></button>
-            <button class="menu_btn" type="button"><div class="content_card"><span class="tit_menu_card">Pigeonneau d'Ille-et-Vilaine</span><div class="ut_menu_card">Sur son lit de gnocchis aux légumes</div></div><span class="card_price">44€</span></button>
+            <input type="checkbox" class="check" id="checked-4" name="checkbox">   
+            <label class="menu_btn" for="checked-4">   
+                <span class="content_card">
+                    <span class="tit_menu_card">Coquilles Saint-Jacques</span>
+                    <span class="ut_menu_card">Accompagnées d'une purée de panais</span>
+                </span>
+                    <span class="card_price">40€</span>  
+                <span class="popup"><i class="fas fa-check-circle popup_circle"></i></span>    
+            </label> 
+
+            <input type="checkbox" class="check" id="checked-5" name="checkbox">   
+            <label class="menu_btn" for="checked-5">   
+                <span class="content_card">
+                    <span class="tit_menu_card">Magret de canard</span>
+                    <span class="ut_menu_card">Et parmentier de pommes de terre</span>
+                </span>
+                    <span class="card_price">35€</span>  
+                <span class="popup"><i class="fas fa-check-circle popup_circle"></i></span>    
+            </label> 
+
+            <input type="checkbox" class="check" id="checked-6" name="checkbox">   
+            <label class="menu_btn" for="checked-6">   
+                <span class="content_card">
+                    <span class="tit_menu_card">Pigeonneau d’Ille-et-Vilaine</span>
+                    <span class="ut_menu_card">Sur son lit de gnocchis aux légumes</span>
+                </span>
+                    <span class="card_price">44€</span>  
+                <span class="popup"><i class="fas fa-check-circle popup_circle"></i></span>    
+            </label> 
             
             <span class="menu_tit">DESSERTS</span>
 
-            <button class="menu_btn" type="button"><div class="content_card"><span class="tit_menu_card">Pétales de violettes glacés</span><div class="ut_menu_card">Et purée de noisettes</div></div><span class="card_price">18€</span></button>
-            <button class="menu_btn" type="button"><div class="content_card"><span class="tit_menu_card">Fondant au chocolat</span><div class="ut_menu_card">Revisité</div></div><span class="card_price">22€</span></button>
-            <button class="menu_btn" type="button"><div class="content_card"><span class="tit_menu_card">Millefeuille croustillant</span><div class="ut_menu_card">Myrtilles et pâte d’amande</div></div><span class="card_price">23€</span></button>
-            
-            <div class="btn_center">
-                <a href="#"><button id="button_pay" type="button">Commander</button></a>
-                </div>
+            <input type="checkbox" class="check" id="checked-7" name="checkbox">   
+            <label class="menu_btn" for="checked-7">   
+                <span class="content_card">
+                    <span class="tit_menu_card">Pétales de violettes glacés</span>
+                    <span class="ut_menu_card">Et purée de noisettes</span>
+                </span>
+                    <span class="card_price">18€</span>  
+                <span class="popup"><i class="fas fa-check-circle popup_circle"></i></span>    
+            </label> 
 
-        </div>
+            
+            <input type="checkbox" class="check" id="checked-8" name="checkbox">   
+            <label class="menu_btn" for="checked-8">   
+                <span class="content_card">
+                    <span class="tit_menu_card">Fondant au chocolat</span>
+                    <span class="ut_menu_card">Revisité</span>
+                </span>
+                    <span class="card_price">22€</span>  
+                <span class="popup"><i class="fas fa-check-circle popup_circle"></i></span>    
+            </label> 
+
+            <input type="checkbox" class="check" id="checked-9" name="checkbox">   
+            <label class="menu_btn" for="checked-9">   
+                <span class="content_card">
+                    <span class="tit_menu_card">Millefeuille croustillant</span>
+                    <span class="ut_menu_card">Myrtilles et pâte d’amande</span>
+                </span>
+                    <span class="card_price">23€</span> 
+                <span class="popup"><i class="fas fa-check-circle popup_circle"></i></span>    
+            </label> 
+
+            <div class="btn_center">
+                <input id="button_pay" type="submit" value="Commander">
+            </div>
+
+        </form>
     </section> 
     
     <footer>
         <div id="footer_des">   
         <span id="footer_tit">ohmyfood</span>
-        <ul>
-            <li><a href="#"><i class="fas fa-utensils"></i>Proposer un restaurant</a></li>
-            <li><a href="#"><i class="fas fa-hands-helping"></i>Devenir partenaire</li>
-            <li><a href="#">Mentions légales</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
+        <div id="footer_li">
+            <a href="#"><i class="fas fa-utensils"></i>Proposer un restaurant</a>
+            <a href="#"><i class="fas fa-hands-helping"></i>Devenir partenaire</a>
+            <a href="#">Mentions légales</a>
+            <a href="#">Contact</a>
+        </div>
         </div>
     </footer>
     </body>

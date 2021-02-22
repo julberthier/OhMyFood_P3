@@ -3,17 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />    <title>ohmyfood</title>
+    <link rel="stylesheet" href="sass/styles.css" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />    
+    <title>ohmyfood</title>
 </head>
 <body>
 
     <!-- Header  -->
-
 <header>
     <div id="tit_des"><span id="head_tit">ohmyfood</span></div>
-    <div id="loc_map"><i class="fas fa-map-marker-alt"></i>Paris, Belleville</div>
-</header>
+    <div id="top_search_bar">
+        <label for="site-search" id="loc_map"><i class="fas fa-map-marker-alt" id="loc_icon"></i> 
+        <input type="search" id="site-search" aria-label="Search through site content" placeholder="Paris, Belleville">
+        </label>
+</div>
+    </header>
 
 <!-- Titre -->
 
@@ -22,30 +26,30 @@
     <div class="container_sec_tit">
     <h1 id="main_tit">Réservez le menu qui vous convient</h1>
     <span id="ud_tit">Découvrez des restaurants d'exception, sélectionnés par nos soins.</span>
-    <a href="#"><button id="button_tit" class="btn_anim_hover" type="button"> Explorer nos restaurants </button></a></div>
+    <a href="#Restaurant" id="button_tit" class="btn_anim_hover"> Explorer nos restaurants</a></div>
     </div>
 </section>
 
 <!-- FONCTIONNEMENT -->
 
-<section id="ftment">
-<h3>Fonctionnement</h3>
-<div id="li_btn">
-<button id="btn" type="button"><i class="fas fa-mobile-alt"></i> Choississez un restaurant </button>
-<button id="btn" type="button"><i class="fas fa-list-ul"></i> Composez votre menu </button>
-<button id="btn" type="button"><i class="fas fa-store"></i> Dégustez au restaurant </button>
-</div>
-</section>
+<nav id="ftment">
+    <h3>Fonctionnement</h3>
+        <div id="li_btn">
+            <button class="btn" type="button"><i class="fas fa-mobile-alt"></i> Choississez un restaurant </button>
+            <button class="btn" type="button"><i class="fas fa-list-ul"></i> Composez votre menu </button>
+            <button class="btn" type="button"><i class="fas fa-store"></i> Dégustez au restaurant </button>
+        </div>
+</nav>
 
 <!-- RESTAURANTS -->
 
-<section>
+<section id="Restaurant">
     <div id="card_design">
        <h2>Restaurants</h2>
-        <a href="la_palette_du_gout.html"><div class="rest_card new_card"><div class="overlay_card"><span class="rest_card_tit">La palette du goût</span><div class="rest_card_ut">Ménilmontant</div><i class="far fa-heart"></i></div></div></a>
-        <a href="la_note_enchantee.html"><div class="rest_card new_card bg_img_1"><div class="overlay_card"><span class="rest_card_tit">La note enchantée</span><div class="rest_card_ut">Charonne</div><i class="far fa-heart"></i></div></div></a>
-        <a href="A_la_francaise.html"><div class="rest_card bg_img_2"><div class="overlay_card"><span class="rest_card_tit">À la française</span><div class="rest_card_ut">Cité Rouge</div><i class="far fa-heart"></i></div></div></a>
-        <a href="le_delice_des_sens.html"><div class="rest_card bg_img_3"><div class="overlay_card"><span class="rest_card_tit">Le délice des sens</span><div class="rest_card_ut">Folie-Ménicourt</div><i class="far fa-heart"></i></div></div></a>
+        <a href="la_palette_du_gout.html"><div class="rest_card new_card"><div class="overlay_card"><span class="rest_card_tit">La palette du goût</span><div class="rest_card_ut">Ménilmontant</div><div class="not_liked"></div></div></div></a>
+        <a href="la_note_enchantee.html"><div class="rest_card new_card bg_img_1"><div class="overlay_card"><span class="rest_card_tit">La note enchantée</span><div class="rest_card_ut">Charonne</div><div class="not_liked"></div></div></div></a>
+        <a href="A_la_francaise.html"><div class="rest_card bg_img_2"><div class="overlay_card"><span class="rest_card_tit">À la française</span><div class="rest_card_ut">Cité Rouge</div><div class="not_liked" id="liked"></div></div></div></a>
+        <a href="le_delice_des_sens.html"><div class="rest_card bg_img_3"><div class="overlay_card"><span class="rest_card_tit">Le délice des sens</span><div class="rest_card_ut">Folie-Ménicourt</div><div class="not_liked"></div></div></div></a>
     </div>
 
 </section>   
@@ -55,12 +59,12 @@
 <footer>
     <div id="footer_des">   
     <span id="footer_tit">ohmyfood</span>
-    <ul>
-        <li><a href="#"><i class="fas fa-utensils"></i>Proposer un restaurant</a></li>
-        <li><a href="#"><i class="fas fa-hands-helping"></i>Devenir partenaire</li>
-        <li><a href="#">Mentions légales</a></li>
-        <li><a href="#">Contact</a></li>
-    </ul>
+    <div id="footer_li">
+        <a href="#"><i class="fas fa-utensils"></i>Proposer un restaurant</a>
+        <a href="#"><i class="fas fa-hands-helping"></i>Devenir partenaire</a>
+        <a href="#">Mentions légales</a>
+        <a href="#">Contact</a>
+    </div>
     </div>
 </footer>
 </body>
