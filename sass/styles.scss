@@ -348,22 +348,10 @@ div.rest_card {
     .not_liked {    
         position: absolute;        
         right: 15px;
-        top: 15px;
-        height: 20px;
-        width: 20px;
-        background-image: url(../images/svg/heart-regular.svg);
-        background-repeat: no-repeat;
-        background-size: auto auto;
-        background-clip: border-box;
-
-        &:hover {                  
-                content: url(../images/svg/heart-full-solid.png);
-                object-fit: contain;
-                overflow: hidden;                        
-                animation: scale_up 450ms cubic-bezier(0.390, 0.575, 0.565, 1.000) 90ms forwards;
-                -webkit-animation: scale_up 450ms cubic-bezier(0.390, 0.575, 0.565, 1.000) 90ms forwards;
-            }  
-      
+        top: 10px;
+        height: 25px;
+        width: 25px; 
+        z-index: 0;            
     }    
 
     /* ANIMATION COEUR */
@@ -487,7 +475,6 @@ padding-top: 15px;
     }
 }
 
-
 #menu_card_des {
 
     display: flex;
@@ -501,6 +488,8 @@ padding-top: 15px;
     padding: 10px;
     position: relative;
     margin-top: 170px;
+    overflow: hidden;
+    z-index: 0;
 
     h1 {
         font-family: $secondfont;
@@ -510,14 +499,13 @@ padding-top: 15px;
         font-weight: 600;
     }
 
-    .heart_2 {
+    .heart {
     position: absolute;
     right: 45px;
     top: 28px;
-    height: 25px;
-    width: 25px;
-    cursor: pointer;
     }
+
+    
 
     .menu_tit {
         margin: 20px 0 8px 0;
@@ -534,6 +522,34 @@ padding-top: 15px;
         }        
     }    
 }
+
+.heart_2{
+    height: 25px;
+    width: 25px;
+    font-size: 25px;
+    position: relative;
+    cursor: pointer;
+}
+
+.heart_2:hover .rempl{
+    height: 20px;
+    opacity: 1;      
+  }
+  
+  .rempl {
+    transition: polygon 0.5s ease-in-out 0.5s;
+    transition: linear-gradient 1s ease-in-out 0.5s; 
+    transition: opacity 1.5s ease-in-out 0.5s;
+    content: $gradientpink;
+  clip-path: polygon(43% 92%, 55% 92%, 100% 26%, 70% 0, 50% 20%, 30% 0, 0 26%);
+     width: 25px;
+     height: 0;
+     position: absolute;
+     left: 0;
+     bottom: 0;
+     opacity: 0;
+     z-index: -1;
+  }
 
 
 .btn_center {
@@ -639,6 +655,54 @@ padding-top: 15px;
 
 }
 
+.slidein {
+    display: flex; 
+    width: 100%;
+    height: 50px;
+    transform: translateX(1500px);
+    margin: 10px 0;
+    animation: slide_in 1.5s 0.5s both;
+
+    &:nth-child(4) {animation: slide_in 1.5s 0.8s both;
+    }
+
+    &:nth-child(5) {animation: slide_in 1.5s 1s both;
+    }
+
+    &:nth-child(6) {animation: slide_in 1.5s 1.2s both;
+    }
+
+    &:nth-child(7) {animation: slide_in 1.5s 1.4s both;
+    }
+
+    &:nth-child(8) {animation: slide_in 1.5s 1.6s both;
+    }
+
+    &:nth-child(9) {animation: slide_in 1.5s 1.8s both;
+    }
+
+    &:nth-child(11) {animation: slide_in 1.5s 2s both;
+    }
+
+    &:nth-child(12) {animation: slide_in 1.5s 2.2s both;
+    }
+
+    &:nth-child(13) {animation: slide_in 1.5s 2.4s both;
+    }    
+}
+
+@keyframes slide_in {
+    0% {
+      opacity: 0;
+      transform: translateX(1500px)
+    }
+    
+    100% {
+      opacity: 1;
+      transform: translateX(0)
+    }
+  }
+
 /* checkbox */
 
 .check {
@@ -714,9 +778,8 @@ padding-top: 15px;
 
             #content_loader {
                 height: 100vh;
-                width: 100vw;
-                background: -webkit-linear-gradient(to bottom, #56ab2f, #a8e063); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to bottom, #56ab2f, #a8e063); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+                width: 100vw;                
+                background: #121416;
             
                 #loader_tit {
                     display: flex;
@@ -764,39 +827,39 @@ padding-top: 15px;
                         position: absolute;
                         bottom: -10px;
                         left: -30px;  
-                        animation: bounce4 3.5s infinite ease-in-out;
+                        animation: bounce4 2.7s infinite ease-in-out;
                     }  
                     
                     #o {
-                        animation: text-anim 2s infinite ease-in-out;
+                        animation: text-anim 2.5s infinite ease-in-out;
                     }
             
                     #h {
-                        animation: text-anim 2s infinite 0.2s ease-in-out;
+                        animation: text-anim 2.5s infinite 0.2s ease-in-out;
                     }
             
                     #m {
-                        animation: text-anim 2s infinite 0.4s ease-in-out;
+                        animation: text-anim 2.5s infinite 0.4s ease-in-out;
                     }
             
                     #y {
-                        animation: text-anim 2s infinite 0.6s ease-in-out;
+                        animation: text-anim 2.5s infinite 0.6s ease-in-out;
                     }
             
                     #f {
-                        animation: text-anim 2s infinite 0.8s ease-in-out;
+                        animation: text-anim 2.5s infinite 0.8s ease-in-out;
                     }
             
                     #o-2 {
-                        animation: text-anim 2s infinite 1s ease-in-out;
+                        animation: text-anim 2.5s infinite 1s ease-in-out;
                     }
             
                     #o-3 {
-                        animation: text-anim 2s infinite 1.2s ease-in-out;
+                        animation: text-anim 2.5s infinite 1.2s ease-in-out;
                     }
             
                     #d {
-                        animation: text-anim 2s infinite 1.4s ease-in-out;
+                        animation: text-anim 2.5s infinite 1.4s ease-in-out;
                     }
                 
                 }
