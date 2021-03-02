@@ -389,7 +389,8 @@ div.rest_card {
         z-index: -1;
         height: 22px;
         width: 25px; 
-        opacity: 1;
+        opacity: 0;
+        animation: opacityheart 0.8s ease-in-out 0.3s 1 forwards;
       }      
       
       @keyframes opacityheart {
