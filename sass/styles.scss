@@ -16,10 +16,12 @@ body {
     width: 100%;
     height: 100%;
     font-family: $primaryfont;
+    position: relative;
 }
 
 a {
     text-decoration: none;
+    color: black;
 }
 
 button {
@@ -77,7 +79,7 @@ header {
     display: flex; 
     justify-content: center;
     align-items: center;
-    width: 100vw;
+    width: 100%;
     height: 40px;
     background: #eaeaea; 
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.4);  
@@ -176,6 +178,7 @@ header {
 display: flex;
 flex-direction: column;
 justify-content: center;
+width: auto;
 margin: 20px 20px;
 }
 
@@ -268,7 +271,7 @@ cursor: pointer;
     background-color: $bggrey;
     padding: 15px 10px;
     width: 100%;
-    height: 100%;
+
 
     h2 {
         font-size: 22px;
@@ -291,6 +294,7 @@ div.rest_card {
     box-shadow: 1px 1px 12px rgb(192, 192, 192);
     color: black;
     cursor: pointer;
+    position: relative;
 
 
     &.new_card::after {
@@ -329,8 +333,7 @@ div.rest_card {
         border-bottom-left-radius: 15px;
         padding-left: 10px;
         padding-top: 5px;
-
-        
+        z-index: 0;        
         }
 
         .rest_card_tit {
@@ -344,14 +347,102 @@ div.rest_card {
         }
     }
 
+    /*-----------------
+    
+                COEUR FILLED 
+    
+    -------------*/
 
-    .not_liked {    
+    #heart_right {
+    position: absolute;
+    right: 30px;
+    top: 25px;
+    font-size: 25px;
+    }    
+    
+    #heart_label {
+        position: relative;
+      }
+      
+      i#fullheart {
+        opacity: 0;
+        position: absolute; 
+        left: 0px;
+        top: 4px;
+      }      
+      
+      input[type=checkbox] {
+        display: none; 
+       }
+      
+      [for="heart"] {
+        cursor: pointer;
+        align-self: center;  
+        transition: color 0.2s ease-in-out;
+        z-index: 1;
+      }
+
+      input[type=checkbox]:checked + label #fullheart {
+        display: inline;
+        content: $gradientpink;
+        clip-path: polygon(43% 92%, 55% 92%, 100% 26%, 70% 0, 50% 20%, 30% 0, 0 26%);
+        z-index: -1;
+        height: 22px;
+        width: 25px; 
+        opacity: 1;
+      }      
+      
+      @keyframes opacityheart {
+        0% {
+          opacity: 0;    
+        }
+        
+        10% {
+          opacity: 0.1;    
+        }
+        
+        20% {
+          opacity: 0.3;    
+        }
+        
+        40% {
+          opacity: 0.4;    
+        }
+        
+        50% {
+          opacity: 0.5;    
+        }
+        
+        60% {
+          opacity: 0.6;    
+        }
+        
+        70% {
+          opacity: 0.7;    
+        }
+        
+        80% {
+          opacity: 0.8;    
+        }
+        
+        90% {
+          opacity: 0.9;    
+        }
+        
+        100% {
+          opacity: 1;    
+        }
+      }
+
+      /*SECOND HEART */ 
+
+      .not_liked {    
         position: absolute;        
-        right: 15px;
+        right: 18px;
         top: 10px;
         height: 25px;
         width: 25px; 
-        z-index: 0;            
+        z-index: 1;    
     }    
 
     /* ANIMATION COEUR */
@@ -387,10 +478,35 @@ div.rest_card {
                   transform: scale(1);
         }
       }
-        
 
-
+      .heart_2{
+        height: 25px;
+        width: 25px;
+        font-size: 25px;
+        position: relative;
+        cursor: pointer;
+    }
     
+    .heart_2:hover .rempl{
+        height: 21px;
+        opacity: 1;      
+      }  
+
+    .rempl {
+        transition: polygon 0.5s ease-in-out 0.5s;
+        transition: linear-gradient 1s ease-in-out 0.5s; 
+        transition: opacity 1.5s ease-in-out 0.5s;
+        content: $gradientpink;
+      clip-path: polygon(43% 92%, 55% 92%, 100% 26%, 70% 0, 50% 20%, 30% 0, 0 26%);
+         width: 25px;
+         height: 0;
+         position: absolute;
+         left: 0;
+         bottom: 0;
+         opacity: 0;
+         z-index: -1;
+      }
+
 
 /*
     FOOTER
@@ -522,34 +638,6 @@ padding-top: 15px;
         }        
     }    
 }
-
-.heart_2{
-    height: 25px;
-    width: 25px;
-    font-size: 25px;
-    position: relative;
-    cursor: pointer;
-}
-
-.heart_2:hover .rempl{
-    height: 20px;
-    opacity: 1;      
-  }
-  
-  .rempl {
-    transition: polygon 0.5s ease-in-out 0.5s;
-    transition: linear-gradient 1s ease-in-out 0.5s; 
-    transition: opacity 1.5s ease-in-out 0.5s;
-    content: $gradientpink;
-  clip-path: polygon(43% 92%, 55% 92%, 100% 26%, 70% 0, 50% 20%, 30% 0, 0 26%);
-     width: 25px;
-     height: 0;
-     position: absolute;
-     left: 0;
-     bottom: 0;
-     opacity: 0;
-     z-index: -1;
-  }
 
 
 .btn_center {
@@ -747,53 +835,27 @@ padding-top: 15px;
 
 
 /* ANIMATION */
-
-@-webkit-keyframes rotate-center {
-  0% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-    opacity: 0;
-  }
-  100% {
-     opacity: 1;
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
-@keyframes rotate-center {
-  0% {
-    opacity: 0;
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
             /* LOADER // ANIMATIONS */
 
             #content_loader {
-                height: 100vh;
+                height: 100%;
                 width: 100vw;                
-                background: #121416;
+                background: #121416;  
+                              
             
                 #loader_tit {
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     font-family: $secondfont;
-                    font-size: 70px;
+                    font-size: 10px;
                     margin: auto;
                     left: 0;
                     right: 0;
                     top: 0; 
                     bottom: 0;
                     height: 100px;
-                    width: 395px;
+                    width: 55%;
                     position: absolute;
                     
                     #text_anim_loader {
@@ -801,34 +863,6 @@ padding-top: 15px;
                         flex-direction: row;
                         z-index: 1;
                     }
-            
-                    .svg_1 {
-                        position: absolute;
-                        top: -10px;
-                        right: -30px; 
-                        animation: bounce 3.5s infinite ease-in-out; 
-                    }    
-            
-                    .svg_2 {
-                        position: absolute;
-                        top: -10px;
-                        left: -30px;  
-                        animation: bounce2 3.5s infinite ease-in-out;
-                    }   
-                    
-                    .svg_3 {
-                        position: absolute;
-                        bottom: -10px;
-                        right: -30px;  
-                        animation: bounce3 3.5s infinite ease-in-out;
-                    }    
-            
-                    .svg_4 {
-                        position: absolute;
-                        bottom: -10px;
-                        left: -30px;  
-                        animation: bounce4 2.7s infinite ease-in-out;
-                    }  
                     
                     #o {
                         animation: text-anim 2.5s infinite ease-in-out;
@@ -860,82 +894,10 @@ padding-top: 15px;
             
                     #d {
                         animation: text-anim 2.5s infinite 1.4s ease-in-out;
-                    }
-                
-                }
-            
-                
-            }
-            
-            
-            
-            .svg_loader {
-                height: 32px;
-                width: 32px;
-            }
-            
-            @keyframes bounce {
-                0% {
-                transform: translateY(0px);
-                }
-            
-                50% {
-                transform: translateY(-50px) scale(1.5) rotate(-25deg);
-            
-                }
-            
-                100% {
-                transform: translateY(-0px);
-                }
-            }
-            
-            
-            @keyframes bounce2 {
-                0% {
-                transform: translateY(0px);
-                }
-            
-                50% {
-                transform: translateY(-50px) scale(1.5) rotate(25deg);
-            
-                }
-            
-                100% {
-                transform: translateY(-0px);
-                }
-            }
-            
-            @keyframes bounce3 {
-                0% {
-                transform: translateY(0px);
-                }
-            
-                50% {
-                transform: translateY(50px) scale(1.5) rotate(-25deg);
-            
-                }
-            
-                100% {
-                transform: translateY(-0px);
-                }
-            }
-            
-            @keyframes bounce4 {
-                0% {
-                transform: translateY(0px);
-                }
-            
-                50% {
-                transform: translateY(50px) scale(1.5) rotate(25deg);
-            
-                }
-            
-                100% {
-                transform: translateY(-0px);
-                }
-            }
-            
-            
+                    }                
+                }                
+            } 
+
             @keyframes text-anim {
                 0% {
                     scale: (0);
@@ -944,7 +906,7 @@ padding-top: 15px;
             
                 25% {
                     scale: (1.25);
-                    font-size: 75px;
+                    font-size: 45px;
                     color: #f16d60;
                     text-shadow: 3px 0 rgba(255, 255, 255, 0.3);
                     background-clip: text;
@@ -952,7 +914,7 @@ padding-top: 15px;
             
                 50% {
                     scale: (1.5);
-                    font-size: 95px;
+                    font-size: 55px;
                     color: #33aa4a;
                     text-shadow: 3px 0 rgba(255, 255, 255, 0.7);
                     background-clip: text;
@@ -960,7 +922,7 @@ padding-top: 15px;
             
                 75% {
                     scale: (1.25);
-                    font-size: 75px;
+                    font-size: 45px;
                     color: #b5d9e5;
                     text-shadow: 3px 0 rgba(255, 255, 255, 0.3);
                     background-clip: text;
@@ -971,3 +933,115 @@ padding-top: 15px;
                     color: #efd299;
                 }
             }
+
+.loader_out {
+    -webkit-animation: loadershow 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) 4.5s forwards;
+    animation: loadershow 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) 4.5s forwards;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    overflow-y: hidden;
+}
+
+@keyframes loadershow {
+    0%  { 
+      opacity: 1;
+      transform: translateY(0);
+      height: 100vh;      
+    }
+    
+    100% {
+      opacity: 0;
+      transform: translateY(-1500px);
+      height: 0;
+    }
+  }
+ 
+  @media (min-width: 1024px) {
+   
+      nav#ftment {
+        display: flex;
+        justify-content: center;
+
+        h3 {
+            position: absolute; 
+            left: 20px;
+        }
+
+        #li_btn {
+              margin: auto;
+          }
+
+        .btn {
+    width: 500px;
+        }
+      }
+
+
+
+#card_design {
+display: flex;
+flex-flow: row wrap;
+justify-content: center;
+
+h2 {
+    position: absolute;
+    left: 30px;
+}
+}
+
+div.rest_card {
+
+    margin: 40px;
+    width: 350px;
+}
+  }
+
+
+@media (min-width: 1440px) {
+
+    nav#ftment {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 200px;
+
+        #li_btn {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            margin: auto;
+            width: 100%;
+        }
+
+        .btn {
+            width: 550px;
+            margin: 0 25px;
+
+            .fas {
+                left: 4vw;
+            }
+        }
+    }
+
+
+    div.rest_card {
+        width: 330px;
+        margin: 40px 10px;
+    }   
+ 
+
+    .menu_btn {
+        margin-left: 35%;
+        width: 600px;
+        
+    }
+}
+
+@media (min-width: 1920px) {
+    div.rest_card {
+        width: 450px;
+        margin: 40px 10px;
+    }
+}

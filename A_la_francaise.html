@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="sass/styles.css" />    
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" /> 
+    <link rel="icon" type="image/png" href="images/food.png"/>
     <title>ohmyfood</title>
 </head>
 <body>
@@ -20,7 +21,14 @@
 
         <form method="get" id="menu_card_des">
 
-            <div><h1>À la française</h1><div class="heart"><div class="heart_2"><i class="far fa-heart"><span class="rempl"></span></i></div></div></div>
+            <div><h1>À la française</h1>
+                <div id="heart_right">
+                    <input type="checkbox" id="heart"> 
+                    <label for="heart" id="heart_label">
+                      <i class="far fa-heart"></i>
+                      <i class="fas fa-heart" id="fullheart"></i>      
+                      </label></div>
+                </div>
 
             <span class="menu_tit">ENTRÉES</span>
 
