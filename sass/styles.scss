@@ -435,7 +435,11 @@ div.rest_card {
         }
       }
 
-      /*SECOND HEART */ 
+      /***
+      
+      SECOND HEART 
+      
+      ***/ 
 
       .not_liked {    
         position: absolute;        
@@ -446,7 +450,11 @@ div.rest_card {
         z-index: 1;    
     }    
 
-    /* ANIMATION COEUR */
+    /*****
+    
+    ANIMATION COEUR 
+    
+    *******/
 
     @keyframes scale_up {
         0% {
@@ -561,9 +569,16 @@ margin: 0 0 20px 15px;
 padding-top: 15px;
 }
 
-/* PAGE MENU */
+/******** 
+
+
+PAGE MENU
+
+
+**********/
 
 #bg_img_rest {
+
     background-image: url(../images/restaurants/la_palette_du_gout.jpg);
     background-repeat: no-repeat;
     height: 280px;
@@ -616,17 +631,11 @@ padding-top: 15px;
         font-weight: 600;
     }
 
-    .heart {
-    position: absolute;
-    right: 45px;
-    top: 28px;
-    }
-
-    
-
-    .menu_tit {
+    h2 {
         margin: 20px 0 8px 0;
         position: relative;  
+        font-weight: 400;
+        font-size: 18px;
 
 
         &::after {
@@ -752,31 +761,31 @@ padding-top: 15px;
     margin: 10px 0;
     animation: slide_in 1.5s 0.5s both;
 
-    &:nth-child(4) {animation: slide_in 1.5s 0.8s both;
+    &:nth-child(2) {animation: slide_in 1.5s 0.8s both;
     }
 
-    &:nth-child(5) {animation: slide_in 1.5s 1s both;
+    &:nth-child(3) {animation: slide_in 1.5s 1s both;
     }
 
-    &:nth-child(6) {animation: slide_in 1.5s 1.2s both;
+    &:nth-child(4) {animation: slide_in 1.5s 1.2s both;
     }
 
-    &:nth-child(7) {animation: slide_in 1.5s 1.4s both;
+    &:nth-child(5) {animation: slide_in 1.5s 1.4s both;
     }
 
-    &:nth-child(8) {animation: slide_in 1.5s 1.6s both;
+    &:nth-child(6) {animation: slide_in 1.5s 1.6s both;
     }
 
-    &:nth-child(9) {animation: slide_in 1.5s 1.8s both;
+    &:nth-child(7) {animation: slide_in 1.5s 1.8s both;
     }
 
-    &:nth-child(11) {animation: slide_in 1.5s 2s both;
+    &:nth-child(8) {animation: slide_in 1.5s 2s both;
     }
 
-    &:nth-child(12) {animation: slide_in 1.5s 2.2s both;
+    &:nth-child(9) {animation: slide_in 1.5s 2.2s both;
     }
 
-    &:nth-child(13) {animation: slide_in 1.5s 2.4s both;
+    &:nth-child(10) {animation: slide_in 1.5s 2.4s both;
     }    
 }
 
@@ -792,7 +801,12 @@ padding-top: 15px;
     }
   }
 
-/* checkbox */
+/******* 
+
+checkbox 
+
+
+*********/
 
 .check {
     display: none; 
@@ -958,6 +972,13 @@ padding-top: 15px;
       height: 0;
     }
   }
+
+  /********** 
+  
+  MEDIA QUERIES 
+  
+  
+  *******/
  
   @media (min-width: 1024px) {
    
@@ -967,7 +988,7 @@ padding-top: 15px;
 
         h3 {
             position: absolute; 
-            left: 20px;
+            left: 5px;            
         }
 
         #li_btn {
@@ -980,6 +1001,7 @@ padding-top: 15px;
       }
 
 
+/*DKT*/ 
 
 #card_design {
 display: flex;
@@ -988,12 +1010,37 @@ justify-content: center;
 
 h2 {
     position: absolute;
-    left: 30px;
+    left: 20px;
 }
+}
+/*DKT END*/
+
+#bg_img_rest {
+    height: 120vh;
+    background-size: cover no-repeat;
+    overflow-y: hidden ;
+}
+
+#globalcarddes{
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#menu_card_des{
+    flex-flow: row wrap;
+    width: 50%;
+    justify-content: flex-start;
+    padding: 0 40px;
+}
+
+.menu_btn {
+    margin-left: 0;
+    width: 450px;        
 }
 
 div.rest_card {
-
     margin: 40px;
     width: 350px;
 }
@@ -1034,15 +1081,20 @@ div.rest_card {
  
 
     .menu_btn {
-        margin-left: 35%;
-        width: 600px;
-        
+        margin-left: 0;
+        width: 650px;        
     }
 }
 
 @media (min-width: 1920px) {
+
     div.rest_card {
         width: 450px;
         margin: 40px 10px;
+    }
+
+    .menu_btn {
+        margin-left: 15%;
+        width: 800px;        
     }
 }

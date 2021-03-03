@@ -15,13 +15,13 @@
         <span id="head_tit">ohmyfood</span></div> 
     </header>
 
-    <div id="bg_img_rest"></div>
-
-    <section>
+    <div id="bg_img_rest"></div>   
         
-        <form method="get" id="menu_card_des">
-
-            <div><h1>La palette du goût</h1>
+        <div id="globalcarddes">
+            <section id="menu_card_des">
+                <form method="get">
+            <div>
+                <h1>La palette du goût</h1>
                 <div id="heart_right">
                 <input type="checkbox" id="heart"> 
                 <label for="heart" id="heart_label">
@@ -30,7 +30,8 @@
                   </label></div>
         </div>
 
-            <span class="menu_tit">ENTRÉES</span>
+    <section>
+            <h2 class="menu_tit">ENTRÉES</h2>
 
             <div class="slidein">
             <input type="checkbox" class="check" id="checked" name="checkbox">   
@@ -63,44 +64,50 @@
                     </span>
                         <span class="card_price">20€</span>  
                     <span class="popup"><i class="fas fa-check-circle popup_circle"></i></span>    
-                </label></div>               
-            
-            <span class="menu_tit">PLATS</span>
+                </label></div>                              
+            </section>
 
-            <div class="slidein">
-            <input type="checkbox" class="check" id="checked-4" name="checkbox">   
-            <label class="menu_btn" for="checked-4">   
-                <span class="content_card">
-                    <span class="tit_menu_card">Filet de boeuf aux herbes</span>
-                    <span class="ut_menu_card">Accompagné de sa ribambelle de légumes</span>
-                </span>
-                    <span class="card_price">40€</span>  
-                <span class="popup"><i class="fas fa-check-circle popup_circle"></i></span>    
-            </label></div>
+    <section>
 
-            <div class="slidein">
-            <input type="checkbox" class="check" id="checked-5" name="checkbox">   
-            <label class="menu_btn" for="checked-5">   
-                <span class="content_card">
-                    <span class="tit_menu_card">Parmentier de queue de boeuf</span>
-                    <span class="ut_menu_card">À la truffe noire sur sa purée de panais</span>
-                </span>
-                    <span class="card_price">35€</span>  
-                <span class="popup"><i class="fas fa-check-circle popup_circle"></i></span>    
-            </label></div> 
+    <h2 class="menu_tit">PLATS</h2>
 
-            <div class="slidein">
-            <input type="checkbox" class="check" id="checked-6" name="checkbox">   
-            <label class="menu_btn" for="checked-6">   
-                <span class="content_card">
-                    <span class="tit_menu_card">Filet de turbot</span>
-                    <span class="ut_menu_card">Aux agrumes</span>
-                </span>
-                    <span class="card_price">44€</span>  
-                <span class="popup"><i class="fas fa-check-circle popup_circle"></i></span>    
-            </label></div> 
-            
-            <span class="menu_tit">DESSERTS</span>
+    <div class="slidein">
+    <input type="checkbox" class="check" id="checked-4" name="checkbox">   
+    <label class="menu_btn" for="checked-4">   
+        <span class="content_card">
+            <span class="tit_menu_card">Filet de boeuf aux herbes</span>
+            <span class="ut_menu_card">Accompagné de sa ribambelle de légumes</span>
+        </span>
+            <span class="card_price">40€</span>  
+        <span class="popup"><i class="fas fa-check-circle popup_circle"></i></span>    
+    </label></div>
+
+    <div class="slidein">
+    <input type="checkbox" class="check" id="checked-5" name="checkbox">   
+    <label class="menu_btn" for="checked-5">   
+        <span class="content_card">
+            <span class="tit_menu_card">Parmentier de queue de boeuf</span>
+            <span class="ut_menu_card">À la truffe noire sur sa purée de panais</span>
+        </span>
+            <span class="card_price">35€</span>  
+        <span class="popup"><i class="fas fa-check-circle popup_circle"></i></span>    
+    </label></div> 
+
+    <div class="slidein">
+    <input type="checkbox" class="check" id="checked-6" name="checkbox">   
+    <label class="menu_btn" for="checked-6">   
+        <span class="content_card">
+            <span class="tit_menu_card">Filet de turbot</span>
+            <span class="ut_menu_card">Aux agrumes</span>
+        </span>
+            <span class="card_price">44€</span>  
+        <span class="popup"><i class="fas fa-check-circle popup_circle"></i></span>    
+    </label></div> 
+
+    </section>
+           
+    <section>
+            <h2 class="menu_tit">DESSERTS</h2>
 
             <div class="slidein">
             <input type="checkbox" class="check" id="checked-7" name="checkbox">   
@@ -134,12 +141,13 @@
                     <span class="card_price">23€</span> 
                 <span class="popup"><i class="fas fa-check-circle popup_circle"></i></span>    
             </label></div> 
+        </section>
 
             <div class="btn_center">
             <input id="button_pay" type="submit" value="Commander">
             </div>      
         </form>
-    </section> 
+    </div></section></div>
     
     <footer>
         <div id="footer_des">   

@@ -506,7 +506,11 @@ input[type=checkbox]:checked + label #fullheart {
   }
 }
 
-/*SECOND HEART */
+/***
+      
+      SECOND HEART 
+      
+      ***/
 .not_liked {
   position: absolute;
   right: 18px;
@@ -516,7 +520,11 @@ input[type=checkbox]:checked + label #fullheart {
   z-index: 1;
 }
 
-/* ANIMATION COEUR */
+/*****
+    
+    ANIMATION COEUR 
+    
+    *******/
 @-webkit-keyframes scale_up {
   0% {
     opacity: 0;
@@ -659,7 +667,13 @@ footer .fa-utensils {
   padding-top: 15px;
 }
 
-/* PAGE MENU */
+/******** 
+
+
+PAGE MENU
+
+
+**********/
 #bg_img_rest {
   background-image: url(../images/restaurants/la_palette_du_gout.jpg);
   background-repeat: no-repeat;
@@ -721,18 +735,14 @@ footer .fa-utensils {
   font-weight: 600;
 }
 
-#menu_card_des .heart {
-  position: absolute;
-  right: 45px;
-  top: 28px;
-}
-
-#menu_card_des .menu_tit {
+#menu_card_des h2 {
   margin: 20px 0 8px 0;
   position: relative;
+  font-weight: 400;
+  font-size: 18px;
 }
 
-#menu_card_des .menu_tit::after {
+#menu_card_des h2::after {
   content: "";
   border-bottom: #99e2d0 3px solid;
   width: 40px;
@@ -881,47 +891,47 @@ footer .fa-utensils {
           animation: slide_in 1.5s 0.5s both;
 }
 
-.slidein:nth-child(4) {
+.slidein:nth-child(2) {
   -webkit-animation: slide_in 1.5s 0.8s both;
           animation: slide_in 1.5s 0.8s both;
 }
 
-.slidein:nth-child(5) {
+.slidein:nth-child(3) {
   -webkit-animation: slide_in 1.5s 1s both;
           animation: slide_in 1.5s 1s both;
 }
 
-.slidein:nth-child(6) {
+.slidein:nth-child(4) {
   -webkit-animation: slide_in 1.5s 1.2s both;
           animation: slide_in 1.5s 1.2s both;
 }
 
-.slidein:nth-child(7) {
+.slidein:nth-child(5) {
   -webkit-animation: slide_in 1.5s 1.4s both;
           animation: slide_in 1.5s 1.4s both;
 }
 
-.slidein:nth-child(8) {
+.slidein:nth-child(6) {
   -webkit-animation: slide_in 1.5s 1.6s both;
           animation: slide_in 1.5s 1.6s both;
 }
 
-.slidein:nth-child(9) {
+.slidein:nth-child(7) {
   -webkit-animation: slide_in 1.5s 1.8s both;
           animation: slide_in 1.5s 1.8s both;
 }
 
-.slidein:nth-child(11) {
+.slidein:nth-child(8) {
   -webkit-animation: slide_in 1.5s 2s both;
           animation: slide_in 1.5s 2s both;
 }
 
-.slidein:nth-child(12) {
+.slidein:nth-child(9) {
   -webkit-animation: slide_in 1.5s 2.2s both;
           animation: slide_in 1.5s 2.2s both;
 }
 
-.slidein:nth-child(13) {
+.slidein:nth-child(10) {
   -webkit-animation: slide_in 1.5s 2.4s both;
           animation: slide_in 1.5s 2.4s both;
 }
@@ -952,7 +962,12 @@ footer .fa-utensils {
   }
 }
 
-/* checkbox */
+/******* 
+
+checkbox 
+
+
+*********/
 .check {
   display: none;
 }
@@ -1176,6 +1191,12 @@ input[type=checkbox]:checked + label .popup .popup_circle {
   }
 }
 
+/********** 
+  
+  MEDIA QUERIES 
+  
+  
+  *******/
 @media (min-width: 1024px) {
   nav#ftment {
     display: -webkit-box;
@@ -1187,7 +1208,7 @@ input[type=checkbox]:checked + label .popup .popup_circle {
   }
   nav#ftment h3 {
     position: absolute;
-    left: 20px;
+    left: 5px;
   }
   nav#ftment #li_btn {
     margin: auto;
@@ -1195,6 +1216,7 @@ input[type=checkbox]:checked + label .popup .popup_circle {
   nav#ftment .btn {
     width: 500px;
   }
+  /*DKT*/
   #card_design {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1209,7 +1231,38 @@ input[type=checkbox]:checked + label .popup .popup_circle {
   }
   #card_design h2 {
     position: absolute;
-    left: 30px;
+    left: 20px;
+  }
+  /*DKT END*/
+  #bg_img_rest {
+    height: 120vh;
+    background-size: cover no-repeat;
+    overflow-y: hidden;
+  }
+  #globalcarddes {
+    width: 100vw;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #menu_card_des {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    width: 50%;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding: 0 40px;
+  }
+  .menu_btn {
+    margin-left: 0;
+    width: 450px;
   }
   div.rest_card {
     margin: 40px;
@@ -1253,8 +1306,8 @@ input[type=checkbox]:checked + label .popup .popup_circle {
     margin: 40px 10px;
   }
   .menu_btn {
-    margin-left: 35%;
-    width: 600px;
+    margin-left: 0;
+    width: 650px;
   }
 }
 
@@ -1262,6 +1315,10 @@ input[type=checkbox]:checked + label .popup .popup_circle {
   div.rest_card {
     width: 450px;
     margin: 40px 10px;
+  }
+  .menu_btn {
+    margin-left: 15%;
+    width: 800px;
   }
 }
 /*# sourceMappingURL=styles.css.map */
