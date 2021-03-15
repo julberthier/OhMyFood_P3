@@ -1010,7 +1010,7 @@ input[type=checkbox]:checked + label .popup .popup_circle {
 /* LOADER // ANIMATIONS */
 #content_loader {
   height: 100%;
-  width: 100vw;
+  width: 99vw;
   background: #121416;
 }
 
@@ -1235,12 +1235,12 @@ input[type=checkbox]:checked + label .popup .popup_circle {
   }
   /*DKT END*/
   #bg_img_rest {
-    height: 120vh;
+    height: 130vh;
     background-size: cover no-repeat;
-    overflow-y: hidden;
+    overflow-x: hidden;
   }
   #globalcarddes {
-    width: 100vw;
+    width: 99vw;
     height: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1319,6 +1319,12 @@ input[type=checkbox]:checked + label .popup .popup_circle {
   .menu_btn {
     margin-left: 15%;
     width: 800px;
+  }
+}
+
+@media (min-width: 2560px) {
+  #bg_img_rest {
+    height: 80vh !important;
   }
 }
 /*# sourceMappingURL=styles.css.map */
