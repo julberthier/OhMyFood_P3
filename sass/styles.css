@@ -173,7 +173,7 @@ input[type="search"] {
   border-radius: 20px;
   padding: 15px;
   border: none;
-  background: linear-gradient(160deg, #ee73da 0%, #df6eda 21%, #a35bdc 100%);
+  background: linear-gradient(160deg, #ee73da 0%, #df6eda 21%, #a35bdc);
   -webkit-box-shadow: 1px 1px 12px silver, inset 1px 0px 5px rgba(255, 255, 255, 0.7);
           box-shadow: 1px 1px 12px silver, inset 1px 0px 5px rgba(255, 255, 255, 0.7);
   cursor: pointer;
@@ -243,7 +243,6 @@ input[type="search"] {
   position: relative;
   -webkit-box-shadow: 1px 1px 12px silver;
           box-shadow: 1px 1px 12px silver;
-  text-align: baseline;
   cursor: pointer;
 }
 
@@ -429,7 +428,7 @@ input[type=checkbox] {
 
 input[type=checkbox]:checked + label #fullheart {
   display: inline;
-  content: linear-gradient(160deg, #ee73da 0%, #df6eda 21%, #a35bdc 100%);
+  content: linear-gradient(160deg, #ee73da 0%, #df6eda 21%, #a35bdc);
   -webkit-clip-path: polygon(43% 92%, 55% 92%, 100% 26%, 70% 0, 50% 20%, 30% 0, 0 26%);
           clip-path: polygon(43% 92%, 55% 92%, 100% 26%, 70% 0, 50% 20%, 30% 0, 0 26%);
   z-index: -1;
@@ -600,7 +599,7 @@ input[type=checkbox]:checked + label #fullheart {
   transition: linear-gradient 1s ease-in-out 0.5s;
   -webkit-transition: opacity 1.5s ease-in-out 0.5s;
   transition: opacity 1.5s ease-in-out 0.5s;
-  content: linear-gradient(160deg, #ee73da 0%, #df6eda 21%, #a35bdc 100%);
+  background: linear-gradient(160deg, #ee73da 0%, #df6eda 21%, #a35bdc);
   -webkit-clip-path: polygon(43% 92%, 55% 92%, 100% 26%, 70% 0, 50% 20%, 30% 0, 0 26%);
           clip-path: polygon(43% 92%, 55% 92%, 100% 26%, 70% 0, 50% 20%, 30% 0, 0 26%);
   width: 25px;
@@ -676,12 +675,10 @@ PAGE MENU
 **********/
 #bg_img_rest {
   background-image: url(../images/restaurants/la_palette_du_gout.jpg);
-  background-repeat: no-repeat;
   height: 280px;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   position: absolute;
@@ -691,17 +688,14 @@ PAGE MENU
 
 #bg_img_rest.rest_2 {
   background-image: url(../images/restaurants/a_la_francaise.jpg);
-  background-repeat: no-repeat;
 }
 
 #bg_img_rest.rest_3 {
   background-image: url(../images/restaurants/la_note_enchantee.jpg);
-  background-repeat: no-repeat;
 }
 
 #bg_img_rest.rest_4 {
   background-image: url(../images/restaurants/le_delice_des_sens.jpg);
-  background-repeat: no-repeat;
 }
 
 #menu_card_des {
@@ -780,7 +774,7 @@ PAGE MENU
   border-radius: 20px;
   padding: 15px;
   border: none;
-  background: linear-gradient(160deg, #ee73da 0%, #df6eda 21%, #a35bdc 100%);
+  background: linear-gradient(160deg, #ee73da 0%, #df6eda 21%, #a35bdc);
   -webkit-box-shadow: 1px 1px 12px silver, inset 1px 0px 5px rgba(255, 255, 255, 0.7);
           box-shadow: 1px 1px 12px silver, inset 1px 0px 5px rgba(255, 255, 255, 0.7);
   margin: 25px 0;
@@ -1089,64 +1083,68 @@ input[type=checkbox]:checked + label .popup .popup_circle {
 
 @-webkit-keyframes text-anim {
   0% {
-    scale: 0;
+    -webkit-transform: scale(0);
+            transform: scale(0);
     color: #ffe4aa;
   }
   25% {
-    scale: 1.25;
+    -webkit-transform: scale(1.25);
+            transform: scale(1.25);
     font-size: 45px;
     color: #f16d60;
     text-shadow: 3px 0 rgba(255, 255, 255, 0.3);
-    background-clip: text;
   }
   50% {
-    scale: 1.5;
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
     font-size: 55px;
     color: #33aa4a;
     text-shadow: 3px 0 rgba(255, 255, 255, 0.7);
-    background-clip: text;
   }
   75% {
-    scale: 1.25;
+    -webkit-transform: scale(1.25);
+            transform: scale(1.25);
     font-size: 45px;
     color: #b5d9e5;
     text-shadow: 3px 0 rgba(255, 255, 255, 0.3);
-    background-clip: text;
   }
   100% {
-    scale: 0.5;
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
     color: #efd299;
   }
 }
 
 @keyframes text-anim {
   0% {
-    scale: 0;
+    -webkit-transform: scale(0);
+            transform: scale(0);
     color: #ffe4aa;
   }
   25% {
-    scale: 1.25;
+    -webkit-transform: scale(1.25);
+            transform: scale(1.25);
     font-size: 45px;
     color: #f16d60;
     text-shadow: 3px 0 rgba(255, 255, 255, 0.3);
-    background-clip: text;
   }
   50% {
-    scale: 1.5;
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
     font-size: 55px;
     color: #33aa4a;
     text-shadow: 3px 0 rgba(255, 255, 255, 0.7);
-    background-clip: text;
   }
   75% {
-    scale: 1.25;
+    -webkit-transform: scale(1.25);
+            transform: scale(1.25);
     font-size: 45px;
     color: #b5d9e5;
     text-shadow: 3px 0 rgba(255, 255, 255, 0.3);
-    background-clip: text;
   }
   100% {
-    scale: 0.5;
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
     color: #efd299;
   }
 }
@@ -1236,7 +1234,8 @@ input[type=checkbox]:checked + label .popup .popup_circle {
   /*DKT END*/
   #bg_img_rest {
     height: 130vh;
-    background-size: cover no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
     overflow-x: hidden;
   }
   #globalcarddes {

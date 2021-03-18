@@ -194,7 +194,6 @@ font-size: 16px;
 font-family: $primaryfont;
 position: relative;
 box-shadow: 1px 1px 12px rgb(192, 192, 192);
-text-align: baseline;
 cursor: pointer;
 
 
@@ -505,7 +504,7 @@ div.rest_card {
         transition: polygon 0.5s ease-in-out 0.5s;
         transition: linear-gradient 1s ease-in-out 0.5s; 
         transition: opacity 1.5s ease-in-out 0.5s;
-        content: $gradientpink;
+        background: $gradientpink;
       clip-path: polygon(43% 92%, 55% 92%, 100% 26%, 70% 0, 50% 20%, 30% 0, 0 26%);
          width: 25px;
          height: 0;
@@ -578,13 +577,10 @@ PAGE MENU
 **********/
 
 #bg_img_rest {
-
     background-image: url(../images/restaurants/la_palette_du_gout.jpg);
-    background-repeat: no-repeat;
     height: 280px;
     width: 100%;
     object-fit: cover;
-    background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     position: absolute;
@@ -593,17 +589,14 @@ PAGE MENU
 
     &.rest_2 {
         background-image: url(../images/restaurants/a_la_francaise.jpg);
-        background-repeat: no-repeat;
     }
 
     &.rest_3 {
         background-image: url(../images/restaurants/la_note_enchantee.jpg);
-        background-repeat: no-repeat;
     }
 
     &.rest_4 {
         background-image: url(../images/restaurants/le_delice_des_sens.jpg);
-        background-repeat: no-repeat;
     }
 }
 
@@ -915,36 +908,33 @@ checkbox
 
             @keyframes text-anim {
                 0% {
-                    scale: (0);
+                    transform: scale(0);
                     color: #ffe4aa;
                 }
             
                 25% {
-                    scale: (1.25);
+                    transform: scale(1.25);
                     font-size: 45px;
                     color: #f16d60;
                     text-shadow: 3px 0 rgba(255, 255, 255, 0.3);
-                    background-clip: text;
                 }
             
                 50% {
-                    scale: (1.5);
+                    transform: scale(1.5);
                     font-size: 55px;
                     color: #33aa4a;
                     text-shadow: 3px 0 rgba(255, 255, 255, 0.7);
-                    background-clip: text;
                     }
             
                 75% {
-                    scale: (1.25);
+                    transform: scale(1.25);
                     font-size: 45px;
                     color: #b5d9e5;
                     text-shadow: 3px 0 rgba(255, 255, 255, 0.3);
-                    background-clip: text;
                 }
             
                 100% {
-                    scale: (0.5);
+                    transform: scale(0.5);
                     color: #efd299;
                 }
             }
@@ -1016,7 +1006,8 @@ checkbox
 
 #bg_img_rest {
     height: 130vh;
-    background-size: cover no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
     overflow-x: hidden ;
 }
 
