@@ -839,13 +839,31 @@ checkbox
     height: 20px;  
     overflow: hidden;
     white-space: nowrap;
-    } 
+} 
   
 
   input[type=checkbox]:checked + label .popup .popup_circle {
     transform: rotate(360deg);
     transition: all 0.5s 0.5s;          
 }   
+
+/*Not Checked */
+
+input[type=checkbox]:not(:checked) + label .card_price {
+    -webkit-transition: all 0.5s ease-in-out 0.2s;
+    transition: all 0.5s ease-in-out 0.2s; 
+  -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+     transform: translateX(0); 
+} 
+
+input[type=checkbox]:not(:checked) + label .popup { 
+    opacity: 0;
+    -webkit-transition: all 0.5s 0.2s ease-in-out;
+    transition: all 0.5s 0.2s ease-in-out;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+     transform: translateX(0); }
 
 
 /* ANIMATION */
