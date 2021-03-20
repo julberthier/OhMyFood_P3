@@ -13,8 +13,10 @@
 body {
   width: 100%;
   height: 100%;
+  max-height: 1133px;
   font-family: "Roboto", sans-serif;
   position: relative;
+  margin: 0 auto;
 }
 
 a {
@@ -808,6 +810,7 @@ PAGE MENU
   /* Internet explorer depuis la version 10 et Edge */
   user-select: none;
   /* Propriété standard */
+  overflow: hidden;
 }
 
 .menu_btn:hover {
@@ -831,12 +834,13 @@ PAGE MENU
 .menu_btn .content_card .tit_menu_card {
   font-weight: 600;
   font-size: 13px;
+  margin: 0 0;
 }
 
 .menu_btn .content_card .ut_menu_card {
   font-weight: 500;
   font-size: 12px;
-  text-align: left;
+  margin: 0 0;
 }
 
 .menu_btn .card_price {
@@ -848,7 +852,8 @@ PAGE MENU
 }
 
 .menu_btn .popup {
-  opacity: 0;
+  visibility: hidden;
+  opacity: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -878,63 +883,64 @@ PAGE MENU
   display: flex;
   width: 100%;
   height: 50px;
-  -webkit-transform: translateX(1500px);
-          transform: translateX(1500px);
   margin: 10px 0;
-  -webkit-animation: slide_in 1.5s 0.5s both;
-          animation: slide_in 1.5s 0.5s both;
+  -webkit-animation: slide_in 1s ease-in-out 0.7s both;
+          animation: slide_in 1s ease-in-out 0.7s both;
 }
 
 .slidein:nth-child(2) {
-  -webkit-animation: slide_in 1.5s 0.8s both;
-          animation: slide_in 1.5s 0.8s both;
+  -webkit-animation: slide_in 1s ease-in-out 0.8s both;
+          animation: slide_in 1s ease-in-out 0.8s both;
 }
 
 .slidein:nth-child(3) {
-  -webkit-animation: slide_in 1.5s 1s both;
-          animation: slide_in 1.5s 1s both;
+  -webkit-animation: slide_in 1s ease-in-out 1s both;
+          animation: slide_in 1s ease-in-out 1s both;
 }
 
 .slidein:nth-child(4) {
-  -webkit-animation: slide_in 1.5s 1.2s both;
-          animation: slide_in 1.5s 1.2s both;
+  -webkit-animation: slide_in 1s ease-in-out 1.2s both;
+          animation: slide_in 1s ease-in-out 1.2s both;
 }
 
 .slidein:nth-child(5) {
-  -webkit-animation: slide_in 1.5s 1.4s both;
-          animation: slide_in 1.5s 1.4s both;
+  -webkit-animation: slide_in 1s ease-in-out 1.4s both;
+          animation: slide_in 1s ease-in-out 1.4s both;
 }
 
 .slidein:nth-child(6) {
-  -webkit-animation: slide_in 1.5s 1.6s both;
-          animation: slide_in 1.5s 1.6s both;
+  -webkit-animation: slide_in 1s ease-in-out 1.6s both;
+          animation: slide_in 1s ease-in-out 1.6s both;
 }
 
 .slidein:nth-child(7) {
-  -webkit-animation: slide_in 1.5s 1.8s both;
-          animation: slide_in 1.5s 1.8s both;
+  -webkit-animation: slide_in 1s ease-in-out 1.8s both;
+          animation: slide_in 1s ease-in-out 1.8s both;
 }
 
 .slidein:nth-child(8) {
-  -webkit-animation: slide_in 1.5s 2s both;
-          animation: slide_in 1.5s 2s both;
+  -webkit-animation: slide_in 1s ease-in-out 2s both;
+          animation: slide_in 1s ease-in-out 2s both;
 }
 
 .slidein:nth-child(9) {
-  -webkit-animation: slide_in 1.5s 2.2s both;
-          animation: slide_in 1.5s 2.2s both;
+  -webkit-animation: slide_in 1s ease-in-out 2.2s both;
+          animation: slide_in 1s ease-in-out 2.2s both;
 }
 
 .slidein:nth-child(10) {
-  -webkit-animation: slide_in 1.5s 2.4s both;
-          animation: slide_in 1.5s 2.4s both;
+  -webkit-animation: slide_in 1s ease-in-out 2.4s both;
+          animation: slide_in 1s ease-in-out 2.4s both;
 }
 
 @-webkit-keyframes slide_in {
   0% {
     opacity: 0;
-    -webkit-transform: translateX(1500px);
-            transform: translateX(1500px);
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+  50% {
+    opacity: 0.3;
   }
   100% {
     opacity: 1;
@@ -946,8 +952,11 @@ PAGE MENU
 @keyframes slide_in {
   0% {
     opacity: 0;
-    -webkit-transform: translateX(1500px);
-            transform: translateX(1500px);
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+  50% {
+    opacity: 0.3;
   }
   100% {
     opacity: 1;
@@ -971,16 +980,17 @@ input[type=checkbox] + label {
 }
 
 input[type=checkbox]:checked + label .card_price {
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   -webkit-transform: translateX(-50px);
   transform: translateX(-50px);
 }
 
 input[type=checkbox]:checked + label .popup {
+  visibility: visible;
   opacity: 1;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   -webkit-transform: translateX(-49px);
   transform: translateX(-49px);
 }
@@ -996,15 +1006,16 @@ input[type=checkbox]:checked + label .ut_menu_card {
 input[type=checkbox]:checked + label .popup .popup_circle {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+  -webkit-transition: all 0.5s 0.5s;
+  transition: all 0.5s 0.5s;
 }
 
 /* ANIMATION */
 /* LOADER // ANIMATIONS */
 #content_loader {
   height: 100%;
-  width: 99vw;
+  width: 100%;
+  max-width: 1920px;
   background: #121416;
 }
 
@@ -1012,9 +1023,8 @@ input[type=checkbox]:checked + label .popup .popup_circle {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1026,7 +1036,6 @@ input[type=checkbox]:checked + label .popup .popup_circle {
   top: 0;
   bottom: 0;
   height: 100px;
-  width: 55%;
   position: absolute;
 }
 
@@ -1214,6 +1223,9 @@ input[type=checkbox]:checked + label .popup .popup_circle {
   nav#ftment .btn {
     width: 500px;
   }
+  #form_des {
+    width: 100%;
+  }
   /*DKT*/
   #card_design {
     display: -webkit-box;
@@ -1237,6 +1249,7 @@ input[type=checkbox]:checked + label .popup .popup_circle {
     background-size: cover;
     background-repeat: no-repeat;
     overflow-x: hidden;
+    max-height: 1133px;
   }
   #globalcarddes {
     width: 99vw;
@@ -1316,14 +1329,28 @@ input[type=checkbox]:checked + label .popup .popup_circle {
     margin: 40px 10px;
   }
   .menu_btn {
-    margin-left: 15%;
-    width: 800px;
+    margin: 0 auto;
+    width: 80%;
+  }
+}
+
+@media (min-width: 1921px) {
+  * {
+    max-width: 1920px;
+    margin: 0 auto;
+  }
+  #footer_li {
+    padding-top: 25px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
 }
 
 @media (min-width: 2560px) {
   #bg_img_rest {
-    height: 80vh !important;
+    max-height: 1133px;
   }
 }
 /*# sourceMappingURL=styles.css.map */

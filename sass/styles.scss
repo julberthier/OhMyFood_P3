@@ -12,11 +12,12 @@
 /* body */
 
 body {
-
     width: 100%;
     height: 100%;
+    max-height: 1133px;
     font-family: $primaryfont;
     position: relative;
+    margin: 0 auto;
 }
 
 a {
@@ -64,8 +65,7 @@ header {
     font-family: $secondfont;
     margin-top: 10px;
     margin-bottom: -15px;
-    text-align: center;
-    
+    text-align: center;    
 }
 
 #tit_des {
@@ -615,6 +615,7 @@ PAGE MENU
     margin-top: 170px;
     overflow: hidden;
     z-index: 0;
+ 
 
     h1 {
         font-family: $secondfont;
@@ -689,6 +690,7 @@ PAGE MENU
     -webkit-user-select: none; /* Chrome, Safari, Opéra depuis la version 15 */
     -ms-user-select: none; /* Internet explorer depuis la version 10 et Edge */
     user-select: none; /* Propriété standard */
+    overflow: hidden;
     
 
     &:hover {
@@ -702,18 +704,17 @@ PAGE MENU
         left: 10px;
         top: 7px;
         line-height: 20px;
-        
 
         .tit_menu_card {
             font-weight: 600;
-            font-size: 13px;
-              
+            font-size: 13px;    
+            margin: 0 0;         
         }
 
         .ut_menu_card {
             font-weight: 500;
             font-size: 12px;
-            text-align: left;
+            margin: 0 0; 
         }
     }
 
@@ -725,8 +726,9 @@ PAGE MENU
         font-size: 12px;
     } 
     
-    .popup {
-        opacity: 0;
+    .popup { 
+        visibility: hidden;       
+        opacity: 1;
         display: flex;
         justify-content: center; 
         align-items: center;
@@ -750,42 +752,45 @@ PAGE MENU
     display: flex; 
     width: 100%;
     height: 50px;
-    transform: translateX(1500px);
     margin: 10px 0;
-    animation: slide_in 1.5s 0.5s both;
+    animation: slide_in 1s ease-in-out 0.7s both;
 
-    &:nth-child(2) {animation: slide_in 1.5s 0.8s both;
+    &:nth-child(2) {animation: slide_in 1s ease-in-out 0.8s both;
     }
 
-    &:nth-child(3) {animation: slide_in 1.5s 1s both;
+    &:nth-child(3) {animation: slide_in 1s ease-in-out 1s both;
     }
 
-    &:nth-child(4) {animation: slide_in 1.5s 1.2s both;
+    &:nth-child(4) {animation: slide_in 1s ease-in-out 1.2s both;
     }
 
-    &:nth-child(5) {animation: slide_in 1.5s 1.4s both;
+    &:nth-child(5) {animation: slide_in 1s ease-in-out 1.4s both;
     }
 
-    &:nth-child(6) {animation: slide_in 1.5s 1.6s both;
+    &:nth-child(6) {animation: slide_in 1s ease-in-out 1.6s both;
     }
 
-    &:nth-child(7) {animation: slide_in 1.5s 1.8s both;
+    &:nth-child(7) {animation: slide_in 1s ease-in-out 1.8s both;
     }
 
-    &:nth-child(8) {animation: slide_in 1.5s 2s both;
+    &:nth-child(8) {animation: slide_in 1s ease-in-out 2s both;
     }
 
-    &:nth-child(9) {animation: slide_in 1.5s 2.2s both;
+    &:nth-child(9) {animation: slide_in 1s ease-in-out 2.2s both;
     }
 
-    &:nth-child(10) {animation: slide_in 1.5s 2.4s both;
+    &:nth-child(10) {animation: slide_in 1s ease-in-out 2.4s both;
     }    
 }
 
 @keyframes slide_in {
     0% {
       opacity: 0;
-      transform: translateX(1500px)
+      transform: translateY(20px)
+    }
+
+    50% {
+        opacity: 0.3;
     }
     
     100% {
@@ -811,17 +816,18 @@ checkbox
 
   
   input[type=checkbox]:checked + label .card_price {
-      -webkit-transition-delay: 0s;
-      transition-delay: 0s;
+      -webkit-transition: all 0.5s ease-in-out;
+      transition: all 0.5s ease-in-out;
       -webkit-transform: translateX(-50px);
       -ms-transform: translateX(-50px);
       transform: translateX(-50px);    
   } 
   
   input[type=checkbox]:checked + label .popup {
-     opacity: 1;
-      -webkit-transition-delay: 0s;
-      transition-delay: 0s;
+      visibility: visible;
+      opacity: 1;
+      -webkit-transition: all 0.5s ease-in-out;
+      transition: all 0.5s ease-in-out;
       -webkit-transform: translateX(-49px);
       -ms-transform: translateX(-49px);
       transform: translateX(-49px);    
@@ -838,7 +844,7 @@ checkbox
 
   input[type=checkbox]:checked + label .popup .popup_circle {
     transform: rotate(360deg);
-     transition: all 0.5s;          
+    transition: all 0.5s 0.5s;          
 }   
 
 
@@ -847,13 +853,13 @@ checkbox
 
             #content_loader {
                 height: 100%;
-                width: 99vw;                
-                background: #121416;  
-                              
+                width: 100%;
+                max-width: 1920px;                
+                background: #121416;                                
             
                 #loader_tit {
                     display: flex;
-                    justify-content: center;
+                    justify-content: space-around;
                     align-items: center;
                     font-family: $secondfont;
                     font-size: 10px;
@@ -862,8 +868,7 @@ checkbox
                     right: 0;
                     top: 0; 
                     bottom: 0;
-                    height: 100px;
-                    width: 55%;
+                    height: 100px;                    
                     position: absolute;
                     
                     #text_anim_loader {
@@ -953,7 +958,7 @@ checkbox
     0%  { 
       opacity: 1;
       transform: translateY(0);
-      height: 100vh;      
+      height: 100vh;
     }
     
     100% {
@@ -990,8 +995,12 @@ checkbox
         }
       }
 
+      #form_des {
+        width: 100%;
+    }
 
-/*DKT*/ 
+    /*DKT*/ 
+
 #card_design {
     display: flex;
     flex-flow: row wrap;
@@ -1002,6 +1011,7 @@ checkbox
         left: 20px;
     }
     }
+
     /*DKT END*/
 
 #bg_img_rest {
@@ -1009,6 +1019,7 @@ checkbox
     background-size: cover;
     background-repeat: no-repeat;
     overflow-x: hidden ;
+    max-height: 1133px;
 }
 
 #globalcarddes{
@@ -1076,7 +1087,7 @@ div.rest_card {
     }
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 1920px) {    
 
     div.rest_card {
         width: 450px;
@@ -1084,13 +1095,25 @@ div.rest_card {
     }
 
     .menu_btn {
-        margin-left: 15%;
-        width: 800px;        
+        margin: 0 auto;
+        width: 80%;        
+    }
+}
+
+@media (min-width: 1921px) {
+    * {
+        max-width: 1920px;
+        margin: 0 auto;
+    }
+
+    #footer_li {
+        padding-top: 25px;
+        flex-direction: row;
     }
 }
 
 @media (min-width: 2560px) {
     #bg_img_rest {
-        height: 80vh !important;
+        max-height: 1133px;
     }
 }
